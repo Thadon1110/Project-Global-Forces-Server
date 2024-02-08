@@ -1,0 +1,25 @@
+extends base
+
+block content 
+    main
+        section.howToJoin
+            .wrapper
+                .howToJoin__choices
+                    .howToJoin__choice.howToJoin__choice-left
+                        .circle.hide.reveal-left
+                        h2.hide-afterLeft join as a soldier
+                        p.hide.reveal-left#noAction Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iusto id fuga. Necessitatibus alias, hic quasi exercitationem nesciunt, officiis fuga facere magnam deleniti, quo enim dicta dolorum obcaecati a error.
+                        a.hide.reveal-left#noAction(href="./factions.html") SELECT A COUNTRY TO FIGHT FOR 
+                            i.fa-solid.fa-angles-right
+                        img.reveal-afterLeft(src="./dist/img/zolnierz.png" alt="A leader")
+
+                    .howToJoin__choice.howToJoin__choice-right
+                        .circle.hide.reveal-right
+                        h2.hide-afterRight join as a leader
+                        p.hide.reveal-right#noAction Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iusto id fuga. Necessitatibus alias, hic quasi exercitationem nesciunt, officiis fuga facere magnam deleniti, quo enim dicta dolorum obcaecati a error.
+                        a.hide.reveal-right#noAction(href="#") FILL THE FORM AND LEAD YOURSELF 
+                            i.fa-solid.fa-angles-right
+                        img.reveal-afterRight(src="./dist/img/chris.png" alt="A soldier")
+
+block scripts
+    script(src="./dist/js/howToJoin.min.js" defer)

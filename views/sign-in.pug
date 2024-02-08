@@ -1,0 +1,44 @@
+extends base
+
+block content 
+    main
+        section.defaultSection.forms
+            .wrapper
+                .forms__form
+                    .forms__form-title
+                        h2 sign in
+
+                    form.login(action="", method="post")
+                        .forms__form-input
+                            label(for="email") Email:
+                            input(type="text", id="email", name="email")
+                            p.error-text Imię
+
+                        .forms__form-input
+                            label(for="pass") Password:
+                            input(type="password", id="pass", name="pass")
+                            p.error-text Imię
+
+                        .forms__form-console.login-console
+                            p#consolePar
+                                span.default C:\Users\Guest&gt;
+                                    = command
+                                if !message 
+                                    span.cursor _
+                            if message
+                                p.error There is an Error:
+                                    br
+                                    span &nbsp;> 
+                                        = message
+                                        br
+                                p#consolePar
+                                    span.default C:\Users\Guest&gt;
+                                    span.cursor _
+
+                        button.forms__form-button(type="submit") login
+
+
+block scripts
+    script(src="./dist/js/login.min.js" defer)
+
+    

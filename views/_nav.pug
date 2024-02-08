@@ -1,0 +1,46 @@
+nav.nav
+    .wrapper
+        .nav__mobile
+            a(href="./factions") factions
+            a(href="./about") about
+            a(href="./how-to-join") how to join
+            a(href="./mods") mods
+            a(href="./donate") donate
+
+              button.nav__mobile-burgerBtn(type="button")
+                i(class="fa-solid fa-bars")
+
+        .nav__settings
+            .nav__settings-flags
+                button.nav__settings-lang(type="button")
+                  img(src="./dist/img/flags/eng.png", alt="ENG")
+
+                button.nav__settings-flag(type="button")
+                  img(src="./dist/img/flags/pl.png", alt="PL")
+
+                button.nav__settings-flag(type="button")
+                  img(src="./dist/img/flags/gr.png", alt="GR")
+
+            .nav__settings-account
+              button.nav__settings-profile(type="button")
+                i(class="fa-regular fa-user")
+
+              .nav__settings-options
+                if loggedIn
+                  a.nav__settings-option.oprooom(href="./operation-room/") op. room
+                  a.nav__settings-option(href="./logout") logout
+                else
+                  a.nav__settings-option(href="./sign-in") sign in
+                  a.nav__settings-option(href="./sign-up") sign up
+
+        .nav__middle
+          .nav__middle-logo
+            a(href="./")
+              img(src="./dist/img/logo.png", alt="PGF")
+
+          .nav__middle-links
+            a(href="./factions") factions
+            a(href="./about") about
+            a(href="./how-to-join") how to join
+            a(href="./mods") mods
+            a(href="./donate") donate

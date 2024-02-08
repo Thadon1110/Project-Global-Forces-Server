@@ -1,0 +1,54 @@
+extends base
+
+block content 
+    main
+        section.defaultSection.forms
+            .wrapper
+                .forms__form
+                    .forms__form-title
+                        h2 sign up
+
+                    form.register(action="", method="post")
+                        .forms__form-input
+                            label(for="email") email:
+                            input(type="text", id="email", name="email")
+
+                        .forms__form-input
+                            label(for="pass") password:
+                            input(type="password", id="pass", name="pass")
+
+                        .forms__form-input
+                            label(for="repass") repeat password:
+                            input(type="password", id="repass", name="repass")
+
+                        .forms__form-input
+                            label(for="steamid") steamid:
+                            input(type="text", id="steamid", name="steamid")
+
+                        .forms__form-input
+                            label(for="discordid") discordid:
+                            input(type="text", id="discordid", name="discordid")
+
+                        .forms__form-console.register-console
+                            p#consolePar
+                                span.default C:\Users\Guest&gt;
+                                    = command
+                                if !errors 
+                                    span.cursor _
+                            if errors
+                                p.error There is an error:
+                                    br
+                                    each error in errors
+                                        span &nbsp;> 
+                                            = error.msg
+                                            br
+                                p#consolePar
+                                    span.default C:\Users\Guest&gt;
+                                    span.cursor _
+
+                        button.forms__form-button(type="submit") register
+
+block scripts
+    script(src="./dist/js/register.min.js" defer)
+
+    

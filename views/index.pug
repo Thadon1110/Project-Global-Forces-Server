@@ -1,0 +1,44 @@
+extends base
+
+block class 
+    - const bodyClass = 'landingPage';
+
+block content 
+    header.header
+        img(src="./dist/img/index.png", alt="")
+        .wrapper
+            .header__title
+                h1 Project: Global Forces
+                p#typing-text An immersive PvP combat experience. Enroll and become part of the many engaged communities fighting for their own cause
+                a(href="./about") read more 
+                    i.fa-solid.fa-angles-right
+
+    main
+        section.trailer
+            .wrapper
+                iframe.trailer__video(
+                    frameborder="0"
+                    src="https://www.youtube.com/embed/L__N7mIZ_50"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                )
+
+        section.join.section-animate#joinIndex
+            .wrapper
+                .join__title
+                    h2 join as
+
+                .join__choices
+                    a.join__choice.join__choice-left(href="./how-to-join?join=leader")
+                        h3 a leader
+                        img(src="./dist/img/chris.png", alt="a leader")
+
+                    a.join__choice.join__choice-right(href="./how-to-join?join=soldier")
+                        h3 a soldier
+                        img(src="./dist/img/zolnierz.png", alt="a soldier")
+
+block scripts
+    script(src="./dist/js/scrollObserver.min.js" defer)
+    script(src="./dist/js/write.min.js" defer)
+
+    
