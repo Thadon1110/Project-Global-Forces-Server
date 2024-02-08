@@ -33,7 +33,7 @@ block content
                             p#consolePar
                                 span.default C:\Users\Guest&gt;
                                     = command
-                                if !errors || !oneError
+                                if !errors && !oneError
                                     span.cursor _
                             if errors
                                 p.error There is an error:
