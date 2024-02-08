@@ -126,7 +126,11 @@ router
 					message: `Email was successfully sent! Please go to your email and verify yourself.`,
 				});
 			} catch (err) {
-				res.status(500).render('sign-up', { title: '- Sign Up', command: `register ${req.body.email}`, errors: `${err.message}` });
+				res.status(500).render('sign-up', {
+					title: '- Sign Up',
+					command: `register ${req.body.email}`,
+					errors: 'Email, SteamID or DiscordID that you are trying to register with is already in use.',
+				});
 			}
 		}
 	);
