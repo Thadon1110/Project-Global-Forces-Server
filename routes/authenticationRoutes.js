@@ -11,7 +11,7 @@ const router = express.Router();
 const defaultCookieAge = 3600; // 1 Hour
 const loginLimiter = rateLimit({
 	windowMs: 30 * 60 * 1000,
-	max: 100,
+	max: 3,
 	message: 'Too many login attempts. Please try again later.',
 });
 
@@ -123,7 +123,7 @@ router
 				res.status(201).render('info', {
 					title: '- Sign Up',
 					command: `register user.email`,
-					errors: `Email was successfully sent! Please go to your email and verify yourself.`,
+					message: `Email was successfully sent! Please go to your email and verify yourself.`,
 				});
 			} catch (err) {
 				res.status(500).render('error', { title: '- Sign Up', command: `register`, message: `Error 500, Internal Server Error` });
