@@ -126,7 +126,7 @@ router
 					message: `Email was successfully sent! Please go to your email and verify yourself.`,
 				});
 			} catch (err) {
-				res.status(500).render('error', { title: '- Sign Up', command: `register`, message: `Error 500, Internal Server Error` });
+				res.status(500).render('error', { title: '- Sign Up', command: `register`, message: `${err.message}` });
 			}
 		}
 	);
