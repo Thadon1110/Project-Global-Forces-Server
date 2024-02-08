@@ -100,7 +100,7 @@ router
 			const errors = validationResult(req);
 			if (!errors.isEmpty()) {
 				// return res.status(400).json({ errors: errors.array() });
-				res.status(400).render('sign-up', { title: '- Sign Up', errors: errors.array(), command: `register ${req.body.email}` });
+				res.status(400).render('sign-up', { title: '- Sign Up', command: `register ${req.body.email}`, errors: errors.array() });
 			}
 
 			try {
@@ -122,11 +122,11 @@ router
 
 				res.status(201).render('info', {
 					title: '- Sign Up',
-					command: `register user.email`,
+					command: `register ${user.email}`,
 					message: `Email was successfully sent! Please go to your email and verify yourself.`,
 				});
 			} catch (err) {
-				res.status(500).render('error', { title: '- Sign Up', command: `register`, message: `${err.message}` });
+				res.status(500).render('sign-up', { title: '- Sign Up', command: `register ${req.body.email}`, errors: `${err.message}` });
 			}
 		}
 	);
