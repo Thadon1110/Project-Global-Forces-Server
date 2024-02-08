@@ -33,7 +33,7 @@ block content
                             p#consolePar
                                 span.default C:\Users\Guest&gt;
                                     = command
-                                if !errors 
+                                if !errors || !oneError
                                     span.cursor _
                             if errors
                                 p.error There is an error:
@@ -42,6 +42,16 @@ block content
                                         span &nbsp;> 
                                             = error.msg
                                             br
+                                p#consolePar
+                                    span.default C:\Users\Guest&gt;
+                                    span.cursor _
+                            
+                            if oneError
+                                p.error There is an Error:
+                                    br
+                                    span &nbsp;> 
+                                        = oneError
+                                        br
                                 p#consolePar
                                     span.default C:\Users\Guest&gt;
                                     span.cursor _

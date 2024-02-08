@@ -129,7 +129,7 @@ router
 				res.status(500).render('sign-up', {
 					title: '- Sign Up',
 					command: `register ${req.body.email}`,
-					errors: 'Email, SteamID or DiscordID that you are trying to register with is already in use.',
+					oneError: 'Email, SteamID or DiscordID that you are trying to register with is already in use.',
 				});
 			}
 		}
