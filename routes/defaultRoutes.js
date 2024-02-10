@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-	res.render('index');
+	res.render('index', { title: '- Globe' });
 });
 
 router.get('/about', (req, res) => {
@@ -32,6 +32,10 @@ router.get('/organizations', (req, res) => {
 
 router.get('/privacy-policy', (req, res) => {
 	res.render('privacy-policy', { title: '- Privacy & Policy' });
+});
+
+router.get('/globe', (req, res) => {
+	res.render('globe', { title: '- Globe' });
 });
 
 module.exports = router;

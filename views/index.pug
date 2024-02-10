@@ -5,8 +5,9 @@ block class
 
 block content 
     header.header
-        img(src="./dist/img/index.png", alt="")
+        //- img(src="./dist/img/index.png", alt="")
         .wrapper
+            canvas#globe
             .header__title
                 h1 Project: Global Forces
                 p#typing-text An immersive PvP combat experience. Enroll and become part of the many engaged communities fighting for their own cause
@@ -38,7 +39,6 @@ block content
                         img(src="./dist/img/zolnierz.png", alt="a soldier")
 
 block scripts
+    script(type="module" src="./client.js" defer)
     script(src="./dist/js/scrollObserver.min.js" defer)
     script(src="./dist/js/write.min.js" defer)
-
-    
